@@ -1,6 +1,8 @@
 import { Component } from 'react';
 import { nanoid } from 'nanoid';
 import { Input, Label, FormStyled } from 'components/Form/Form.styled';
+import PropTypes from 'prop-types';
+
 
 export default class Filter extends Component {
     filterId = nanoid();
@@ -21,3 +23,7 @@ export default class Filter extends Component {
         );
     }
 }
+
+Filter.propTypes = {
+    value: PropTypes.string.isRequired,
+};

@@ -2,6 +2,7 @@ import { nanoid } from 'nanoid';
 import { Component } from 'react';
 import { FormStyled, Input, Label } from './Form.styled';
 import { Button } from 'components/ContactList/ContactList.styled';
+import PropTypes from 'prop-types';
 
 export default class Form extends Component {
     nameId = nanoid();
@@ -58,3 +59,8 @@ export default class Form extends Component {
         );
     }
 }
+
+Form.propTypes = {
+    name: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
+};
